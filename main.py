@@ -1,6 +1,6 @@
-def main():
-    print("Hello from nanoblog!")
+from nano import nano_blog
 
+app = nano_blog()
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
