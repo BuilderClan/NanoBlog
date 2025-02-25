@@ -6,6 +6,7 @@ def nano_blog():
 
     from .home.home import home_bp
 
+    # blueprints
     app.register_blueprint(blueprint=home_bp)
 
     return app
