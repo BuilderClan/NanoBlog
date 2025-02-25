@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nano Blog</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home/home.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Nano Blog</h1>
+      <p>Your source for bite-sized knowledge.</p>
+    </header>
+
+    <section class="posts">
+      <h2>Featured Posts</h2>
+      <div class="post-list">
+        {% for post in featured_posts %}
+        <article>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+          <a href="{{ post.link }}">Read More</a>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Nano Blog</p>
+    </footer>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nano Blog - Your Source for Bite-Sized Knowledge</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home/home.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <h1 class="logo">Nano Blog</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hero-section">
+        <h2>Welcome to Nano Blog</h2>
+        <p>
+          Your source for bite-sized knowledge on all things tech, lifestyle,
+          and more.
+        </p>
+        <a href="#" class="cta-button">Read the Latest Posts</a>
+      </div>
+    </header>
+
+    <section class="featured-posts">
+      <h3>Featured Posts</h3>
+      <div class="posts-container">
+        {% for post in featured_posts %}
+        <article class="post">
+          <img src="{{ post.image }}" alt="{{ post.title }}" />
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.description }}</p>
+          <a href="{{ post.link }}">Read More</a>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Nano Blog. All rights reserved.</p>
+    </footer>
+  </body>
+</html> -->
