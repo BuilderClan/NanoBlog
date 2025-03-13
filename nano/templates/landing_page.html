@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,5 +31,97 @@
     <footer>
       <p>&copy; 2025 Nano Blog</p>
     </footer>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Blog</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home/home.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h1>Minimal Blog</h1>
+      <input type="text" id="search" placeholder="Search blog posts..." />
+      <button id="dark-mode-toggle">🌙</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h2>Welcome to the Blog</h2>
+        <p>
+          Explore insights, tips, and guides on web development, tech, and
+          design.
+        </p>
+        <a href="#" class="btn">Start Reading</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <section class="content">
+        <div class="blog-post">
+          <!-- <img src="https://source.unsplash.com/600x400/?tech" alt="Blog Image"> -->
+          <h2><a href="#">How to Build a Blog</a></h2>
+          <p>
+            Learn how to create a minimalist blog using HTML, CSS, and
+            JavaScript.
+          </p>
+        </div>
+
+        <div class="blog-post">
+          <!-- <img src="https://source.unsplash.com/600x400/?design" alt="Blog Image"> -->
+          <h2><a href="#">The Power of Minimalism</a></h2>
+          <p>Why simple UI/UX makes your application better.</p>
+        </div>
+
+        <div class="blog-post">
+          <!-- <img src="https://source.unsplash.com/600x400/?coding" alt="Blog Image"> -->
+          <h2><a href="#">CSS Tips for Clean UI</a></h2>
+          <p>Learn how to use CSS to create modern, minimalist designs.</p>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3>Recent Posts</h3>
+          <ul>
+            <li><a href="#">How to Build a Blog</a></li>
+            <li><a href="#">The Power of Minimalism</a></li>
+            <li><a href="#">CSS Tips for Clean UI</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Tech</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section subscribe">
+          <h3>Subscribe</h3>
+          <p>Get the latest blog updates.</p>
+          <input type="email" placeholder="Enter your email" />
+          <button class="btn">Subscribe</button>
+        </div>
+      </aside>
+    </main>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='js/home/script.js') }}"
+    />
   </body>
 </html>
