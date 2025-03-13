@@ -3,87 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nano Blog</title>
+    <title>Minimal Blog</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/home/home.css') }}"
     />
   </head>
   <body>
-    <header>
-      <h1>Nano Blog</h1>
-      <p>Your source for bite-sized knowledge.</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h1>Minimal Blog</h1>
+      <input type="text" id="search" placeholder="Search blog posts..." />
+      <button id="dark-mode-toggle">🌙</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <h2>Welcome to the Blog</h2>
+        <p>
+          Explore insights, tips, and guides on web development, tech, and
+          design.
+        </p>
+        <a href="#" class="btn">Start Reading</a>
+      </div>
     </header>
 
-    <section class="posts">
-      <h2>Featured Posts</h2>
-      <div class="post-list">
-        {% for post in featured_posts %}
-        <article>
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.description }}</p>
-          <a href="{{ post.link }}">Read More</a>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="container">
+      <section class="content">
+        <div class="blog-post">
+          <!-- <img src="https://source.unsplash.com/600x400/?tech" alt="Blog Image"> -->
+          <h2><a href="#">How to Build a Blog</a></h2>
+          <p>
+            Learn how to create a minimalist blog using HTML, CSS, and
+            JavaScript.
+          </p>
+        </div>
 
-    <footer>
-      <p>&copy; 2025 Nano Blog</p>
-    </footer>
+        <div class="blog-post">
+          <!-- <img src="https://source.unsplash.com/600x400/?design" alt="Blog Image"> -->
+          <h2><a href="#">The Power of Minimalism</a></h2>
+          <p>Why simple UI/UX makes your application better.</p>
+        </div>
+
+        <div class="blog-post">
+          <!-- <img src="https://source.unsplash.com/600x400/?coding" alt="Blog Image"> -->
+          <h2><a href="#">CSS Tips for Clean UI</a></h2>
+          <p>Learn how to use CSS to create modern, minimalist designs.</p>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3>Recent Posts</h3>
+          <ul>
+            <li><a href="#">How to Build a Blog</a></li>
+            <li><a href="#">The Power of Minimalism</a></li>
+            <li><a href="#">CSS Tips for Clean UI</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Tech</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section subscribe">
+          <h3>Subscribe</h3>
+          <p>Get the latest blog updates.</p>
+          <input type="email" placeholder="Enter your email" />
+          <button class="btn">Subscribe</button>
+        </div>
+      </aside>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/home/script.js') }}"></script>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nano Blog - Your Source for Bite-Sized Knowledge</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/home/home.css') }}"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="navbar">
-        <h1 class="logo">Nano Blog</h1>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="hero-section">
-        <h2>Welcome to Nano Blog</h2>
-        <p>
-          Your source for bite-sized knowledge on all things tech, lifestyle,
-          and more.
-        </p>
-        <a href="#" class="cta-button">Read the Latest Posts</a>
-      </div>
-    </header>
-
-    <section class="featured-posts">
-      <h3>Featured Posts</h3>
-      <div class="posts-container">
-        {% for post in featured_posts %}
-        <article class="post">
-          <img src="{{ post.image }}" alt="{{ post.title }}" />
-          <h4>{{ post.title }}</h4>
-          <p>{{ post.description }}</p>
-          <a href="{{ post.link }}">Read More</a>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Nano Blog. All rights reserved.</p>
-    </footer>
-  </body>
-</html> -->
